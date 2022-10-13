@@ -1,0 +1,15 @@
+<%- include("includes/head.ejs") %>
+    <link rel="stylesheet" href="css/users.css" />
+  <%- include("includes/nav.ejs") %>
+    <main>
+      <h1>Welcome to Users page</h1>
+      <ul class="users-content">
+        <% if (users.length > 0) { %> <% users.map(user => { %>
+        <li><%= user.username %></li>
+        <% })} else {%>
+        <li>No Users Found</li>
+        <% } %>
+      </ul>
+    </main>
+  </body>
+</html>
